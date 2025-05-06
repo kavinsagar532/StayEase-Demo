@@ -1,0 +1,51 @@
+.home-page {
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f8ff;
+    color: #222;
+  }
+  
+  .home-hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .home-hero h1 {
+    font-size: 2.8rem;
+    color: #0057b7;
+    margin-bottom: 10px;
+  }
+  
+  .home-hero p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .home-about,
+  .home-features {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-about h2,
+  .home-features h2 {
+    color: #0057b7;
+    margin-bottom: 15px;
+  }
+  
+  .home-about p,
+  .home-features li {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .home-features ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  

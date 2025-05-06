@@ -1,0 +1,233 @@
+/* TenantLogin.css - Blue Theme */
+
+.tenant-login-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left container */
+.tenant-login-left-container {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.tenant-login-left-container::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.tenant-login-left-container::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.tenant-login-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.tenant-login-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #93c5fd;
+  border-radius: 2px;
+}
+
+.tenant-login-description {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+  max-width: 80%;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+.tenant-login-features {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1rem;
+  color: #e2e8f0;
+  z-index: 2;
+}
+
+.tenant-login-features li {
+  margin-bottom: 0.8rem;
+}
+
+.tenant-login-tagline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+/* Right container */
+.tenant-login-right-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f8fafc;
+}
+
+.tenant-login-right-container form {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(30, 58, 138, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.tenant-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.tenant-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1e40af;
+  font-size: 0.95rem;
+}
+
+.tenant-form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.tenant-form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.tenant-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.tenant-btn:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.tenant-btn:active {
+  transform: translateY(0);
+}
+
+.tenant-signup-link {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.tenant-signup-link a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tenant-signup-link a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .tenant-login-left-container {
+    padding: 3rem;
+  }
+
+  .tenant-login-right-container form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tenant-login-container {
+    flex-direction: column;
+  }
+
+  .tenant-login-left-container {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .tenant-login-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tenant-login-description {
+    max-width: 100%;
+  }
+
+  .tenant-login-right-container {
+    padding: 2rem 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

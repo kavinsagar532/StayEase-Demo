@@ -1,0 +1,58 @@
+.my-bookings-container {
+    padding: 2rem 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .my-bookings-title {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 2rem;
+  }
+  
+  .booking-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .booking-card {
+    background-color: #f1f5f9;
+    border-left: 6px solid #2563eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .booking-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .booking-card h3 {
+    font-size: 1.3rem;
+    color: #1e40af;
+    margin-bottom: 1rem;
+  }
+  
+  .booking-card p {
+    font-size: 1rem;
+    margin: 0.4rem 0;
+  }
+  
+  .booking-status {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .booking-status.confirmed {
+    color: #10b981;
+  }
+  
+  .booking-status.pending {
+    color: #f59e0b;
+  }
+  
+  .booking-status.rejected {
+    color: #ef4444;
+  }
+  

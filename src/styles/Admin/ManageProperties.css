@@ -1,0 +1,119 @@
+.manage-properties-container {
+  padding: 2rem;
+  padding-left: 25rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+  .manage-properties-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 2rem;
+  }
+  
+  .property-cards-container {
+    display: grid;
+    width: 700px;
+    gap: 1.5rem;
+  }
+  
+  .property-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    /* justify-content: space-between; Aligning elements inside the card */
+  }
+  
+  .property-card-left {
+    flex: 0 0 200px; /* Fixed width for the image */
+    margin-right: 2rem;
+  }
+  
+  .property-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .property-card-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .property-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .property-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .property-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+  }
+  
+  .property-status.pending {
+    background-color: #f59e0b;
+    color: white;
+  }
+  
+  .property-status.approved {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .property-status.rejected {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .property-card-body {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .property-card-actions {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 1.5rem; /* Space between buttons */
+  }
+  
+  .property-action-btn,
+  .property-delete-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    min-width: 120px; /* Ensures buttons have a consistent width */
+  }
+  
+  .property-action-btn:hover,
+  .property-delete-btn:hover {
+    background-color: #1e40af;
+  }
+  
+  .property-delete-btn {
+    background-color: #ef4444;
+  }
+  
+  .property-delete-btn:hover {
+    background-color: #dc2626;
+  }
+  

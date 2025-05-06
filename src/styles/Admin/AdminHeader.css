@@ -1,0 +1,128 @@
+/* AdminHeader.css - Blue Theme */
+
+/* Base header styles */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Header title styling */
+  .admin-header-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navigation container */
+  .admin-nav {
+    display: flex;
+  }
+  
+  .admin-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+  }
+  
+  /* Navigation items */
+  .admin-nav-item {
+    position: relative;
+  }
+  
+  /* Navigation links */
+  .admin-nav-link {
+    text-decoration: none;
+    color: #f0f4f8; /* Lighter color for better visibility */
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: block;
+  }
+  
+  /* Improved link visibility */
+  .admin-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.25); /* Slightly more visible on hover */
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  /* Active link styling */
+  .admin-nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3); /* Increased visibility for active links */
+    color: white;
+    font-weight: 600;
+  }
+  
+  .admin-nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: #93c5fd;
+    border-radius: 3px;
+  }
+  
+  /* Logout link specific styling */
+  .admin-nav-item:last-child .admin-nav-link {
+    background-color: rgba(239, 68, 68, 0.3); /* Darker color for logout */
+    color: white; /* Ensuring the text is visible */
+    font-weight: 600; /* Stronger font weight */
+  }
+  
+  .admin-nav-item:last-child .admin-nav-link:hover {
+    background-color: rgba(239, 68, 68, 0.45); /* Darker hover state for logout */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .admin-header {
+      padding: 1rem 1.5rem;
+    }
+  
+    .admin-nav-list {
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .admin-header {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    .admin-nav-list {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .admin-nav-link {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Scrolled state */
+  .admin-header.scrolled {
+    padding: 0.75rem 2.5rem;
+    background: rgba(30, 58, 138, 0.95);
+    backdrop-filter: blur(8px);
+  }
+  

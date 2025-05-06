@@ -1,0 +1,43 @@
+.my-complaints-container {
+  padding: 2rem 25rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 800px;
+}
+
+.my-complaints-title {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.complaints-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.complaint-box {
+  background-color: #ebd7696b;
+  border-left: 6px solid #e3dd1e;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.complaint-box h3 {
+  color: #c5630d;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.complaint-date {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #334155;
+}
+
+.complaint-desc {
+  font-size: 1.05rem;
+  color: #0f172a;
+  line-height: 1.7;
+}

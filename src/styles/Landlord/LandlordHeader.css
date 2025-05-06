@@ -1,0 +1,107 @@
+/* LandlordHeader.css - Blue Theme */
+
+/* Base header styles */
+.landlord-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Header title styling */
+.landlord-header-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation container */
+.landlord-nav {
+  display: flex;
+}
+
+.landlord-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+/* Navigation items */
+.landlord-nav-item {
+  position: relative;
+}
+
+/* Navigation links */
+.landlord-nav-link {
+  text-decoration: none;
+  color: #f1f5f9; /* lighter font for better visibility */
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.landlord-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Logout link specific styling */
+.landlord-nav-item:last-child .landlord-nav-link {
+  background-color: rgba(220, 38, 38, 0.25); /* darker red background */
+  color: #fee2e2;
+}
+
+.landlord-nav-item:last-child .landlord-nav-link:hover {
+  background-color: rgba(220, 38, 38, 0.4);
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .landlord-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .landlord-nav-list {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landlord-header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .landlord-nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .landlord-nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Scrolled state */
+.landlord-header.scrolled {
+  padding: 0.75rem 2.5rem;
+  background: rgba(30, 58, 138, 0.95);
+  backdrop-filter: blur(8px);
+}

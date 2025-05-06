@@ -1,0 +1,16 @@
+.footer-container {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .footer-content p {
+    margin: 0.25rem 0;
+    opacity: 0.9;
+  }
+  

@@ -1,0 +1,44 @@
+.landlord-bookings-container {
+    padding: 2rem 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .landlord-bookings-title {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 2rem;
+  }
+  
+  .booking-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .booking-card {
+    background-color: #f0f9ff;
+    border-left: 6px solid #2563eb;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.1);
+  }
+  
+  .booking-card h3 {
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+  }
+  
+  .booking-card p {
+    margin: 0.3rem 0;
+    color: #334155;
+  }
+  
+  .paid {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .pending {
+    color: #f59e0b;
+    font-weight: bold;
+  }
+  

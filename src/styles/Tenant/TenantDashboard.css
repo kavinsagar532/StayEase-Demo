@@ -1,0 +1,41 @@
+.tenant-dashboard-container {
+  padding: 2rem 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tenant-dashboard-title {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.tenant-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.tenant-dashboard-card {
+  background: #eff6ff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  border-left: 6px solid #2563eb;
+  transition: transform 0.3s ease;
+}
+
+.tenant-dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.tenant-dashboard-card h3 {
+  font-size: 1.3rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.tenant-dashboard-card p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0f172a;
+}

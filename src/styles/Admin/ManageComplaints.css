@@ -1,0 +1,43 @@
+.manage-complaints-container {
+    padding: 2rem;
+    padding-left: 25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .manage-complaints-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 2rem;
+  }
+  
+  .complaints-cards-container {
+    display: grid;
+    width: 700px;
+    gap: 1.5rem;
+  }
+  
+  .complaint-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .complaint-card-left {
+    flex: 1;
+  }
+  
+  .complaint-tenant-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .complaint-text {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  

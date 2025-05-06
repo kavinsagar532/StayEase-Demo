@@ -1,0 +1,91 @@
+.manage-landlords-container {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .manage-landlords-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 2rem;
+  }
+  
+  .landlord-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .landlord-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .landlord-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .landlord-card-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .landlord-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+  }
+  
+  .landlord-status.active {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .landlord-status.blocked {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .landlord-card-body {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .landlord-card-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .landlord-action-btn,
+  .landlord-delete-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .landlord-action-btn:hover,
+  .landlord-delete-btn:hover {
+    background-color: #1e40af;
+  }
+  
+  .landlord-delete-btn {
+    background-color: #ef4444;
+  }
+  
+  .landlord-delete-btn:hover {
+    background-color: #dc2626;
+  }
+  

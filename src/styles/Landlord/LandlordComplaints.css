@@ -1,0 +1,39 @@
+.landlord-complaints-container {
+    padding: 2rem 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .landlord-complaints-title {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 2rem;
+  }
+  
+  .complaints-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .complaint-card {
+    background-color: #fef9c3;
+    border-left: 6px solid #facc15;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(234, 179, 8, 0.1);
+  }
+  
+  .complaint-card h3 {
+    color: #92400e;
+    margin-bottom: 1rem;
+  }
+  
+  .complaint-card p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #374151;
+  }
+
+  .landlord-complaints-item{
+    margin-left: 15px;
+  }
+  
