@@ -24,6 +24,9 @@ export default function TenantHeader() {
             <Link to="/tenant/add-complaints" className="tenant-nav-link"><b>Add Complaint</b></Link>
           </li>
           <li className="tenant-nav-item">
+            <Link to="/tenant/payments" className="tenant-nav-link"><b>Payments</b></Link>
+          </li>
+          <li className="tenant-nav-item">
             <Link to="/tenant/tenant-profile" className="tenant-nav-link"><b>Profile</b></Link>
           </li>
           <li className="tenant-nav-item">

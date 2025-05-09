@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../../../styles/Tenant/ViewProperties.css";
 
 const sampleProperties = [
@@ -19,6 +20,12 @@ const sampleProperties = [
 ];
 
 export default function ViewProperties() {
+  const navigate = useNavigate();
+
+  const handleBookNow = (property) => {
+    navigate('/tenant/book-property', { state: { property } });
+  };
+
   return (
     <div className="view-properties-container">
       <h2 className="view-properties-title">Available Properties</h2>
@@ -30,6 +37,12 @@ export default function ViewProperties() {
               <h3>{property.title}</h3>
               <p><strong>Location:</strong> {property.location}</p>
               <p><strong>Rent:</strong> {property.rent}</p>
+              <button 
+                className="book-now-btn" 
+                onClick={() => handleBookNow(property)}
+              >
+                Book Now
+              </button>
             </div>
           </div>
         ))}

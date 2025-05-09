@@ -1,68 +1,69 @@
-.manage-complaints-container {
+.tenant-payments-container {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.manage-complaints-title {
+.tenant-payments-title {
   text-align: center;
-  font-size: 2rem;
   color: #1e40af;
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
-.complaints-cards-container {
+.payments-list {
   display: grid;
   gap: 1.5rem;
 }
 
-.complaint-card {
+.payment-box {
   background-color: #f9fafb;
   border-radius: 10px;
   padding: 1.5rem;
   border: 1px solid #e2e8f0;
   transition: box-shadow 0.3s ease;
+  position: relative;
 }
 
-.complaint-card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.complaint-header {
+.payment-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.complaint-header h3 {
+.payment-header h3 {
   margin: 0;
   color: #1e40af;
   font-size: 1.25rem;
 }
 
-.complaint-status {
+.payment-status {
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-.complaint-status.pending {
+.payment-status.payment-status-pending {
   background-color: #fef3c7;
   color: #d97706;
 }
 
-.complaint-status.solved {
+.payment-status.payment-status-paid {
   background-color: #d1fae5;
   color: #059669;
 }
 
-.complaint-details {
+.payment-status.payment-status-overdue {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.payment-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
@@ -70,41 +71,39 @@
   color: #4a5568;
 }
 
-.complaint-detail {
+.payment-detail {
   background-color: #f1f5f9;
   padding: 0.5rem;
   border-radius: 6px;
   font-size: 0.9rem;
 }
 
-.complaint-description, 
-.complaint-additional-details {
-  background-color: #f8fafc;
-  padding: 1rem;
+.pay-now-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #1e40af;
+  color: white;
+  border: none;
   border-radius: 6px;
-  border: 1px solid #e2e8f0;
-  color: #2d3748;
-  line-height: 1.6;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-now-btn:hover {
+  background-color: #2563eb;
+}
+
+.no-payments-message {
+  text-align: center;
+  color: #718096;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 10px;
 }
 
 @media (max-width: 600px) {
-  .complaint-details {
+  .payment-details {
     grid-template-columns: 1fr;
   }
-}
-
-.complaint-tenant-name {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.complaint-text {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-}
-
-.complaint-property {
-  font-size: 0.9rem;
-  color: #4a5568;
-  margin-top: 0.25rem;
 }

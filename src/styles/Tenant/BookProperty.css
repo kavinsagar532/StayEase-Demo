@@ -1,0 +1,73 @@
+.book-property-container {
+  padding: 2rem;
+  padding-left: 25rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-property-container h2 {
+  font-size: 2rem;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+}
+
+.booking-details {
+  background-color: #f0f4f8;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.booking-details p {
+  margin: 0.5rem 0;
+  color: #2d3748;
+}
+
+.date-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.date-picker-group {
+  width: 48%;
+}
+
+.date-picker-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.date-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  appearance: none;
+  background-color: white;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.submit-booking-btn {
+  width: 100%;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.submit-booking-btn:hover {
+  background-color: #059669;
+}
+
+.submit-booking-btn:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}

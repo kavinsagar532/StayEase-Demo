@@ -1,26 +1,85 @@
 .tenant-profile-container {
-    padding: 2rem 30rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .tenant-profile-title {
-    font-size: 2rem;
-    color: #1e3a8a;
-    margin-bottom: 2rem;
-  }
-  
-  .tenant-profile-box {
-    background: #eff6ff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
-    border-left: 6px solid #2563eb;
-    max-width: 600px;
-  }
-  
-  .tenant-profile-box p {
-    font-size: 1.1rem;
-    color: #0f172a;
-    margin: 0.75rem 0;
-  }
-  
+  padding: 2rem;
+  padding-left: 25rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.tenant-profile-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e40af;
+  margin: 0;
+}
+
+.edit-profile-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+  background-color: #2563eb;
+}
+
+.tenant-profile-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.tenant-profile-box p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.profile-input-group {
+  margin-bottom: 1rem;
+}
+
+.profile-input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.profile-input-group input,
+.profile-input-group select,
+.profile-input-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+}
+
+.save-profile-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-profile-btn:hover {
+  background-color: #059669;
+}
+
+.tenant-profile-box p {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin: 0.75rem 0;
+}

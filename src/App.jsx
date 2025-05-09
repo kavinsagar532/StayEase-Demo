@@ -21,7 +21,8 @@ import LandlordHeader from "./components/pages/Landlord/LandlordHeader";
 import TenantLogin from "./components/pages/Tenant/TenantLogin";
 import TenantSignup from "./components/pages/Tenant/TenantSignup";
 import TenantDashboard from "./components/pages/Tenant/TenantDashboard";
-import TenantHeader from "./components/pages/Tenant/TenantHeader";
+import TenantHeader from './components/pages/Tenant/TenantHeader';
+import TenantPayments from './components/pages/Tenant/TenantPayments';
 
 // Common
 import CommonHeader from "./components/CommonHeader";
@@ -41,6 +42,7 @@ import MyComplaints from "./components/pages/Tenant/MyComplaints";
 import SubmitComplaint from "./components/pages/Tenant/SubmitComplaint";
 import TenantProfile from "./components/pages/Tenant/TenantProfile";
 import LandlordProfile from "./components/pages/Landlord/LandlordProfile";
+import BookProperty from "./components/pages/Tenant/BookProperty";
 
 function App() {
   return (
@@ -223,6 +225,13 @@ function App() {
             <Footer />
           </>
         } />
+        <Route path="/tenant/payments" element={
+          <>
+            <TenantHeader />
+            <TenantPayments />
+            <Footer />
+          </>
+        } />
         <Route path="/tenant/tenant-profile" element={
           <>
             <TenantHeader />
@@ -234,6 +243,13 @@ function App() {
           <>
             <LandlordHeader />
             <LandlordProfile />
+            <Footer />
+          </>
+        } />
+        <Route path="/tenant/book-property" element={
+          <>
+            <TenantHeader />
+            <BookProperty />
             <Footer />
           </>
         } />

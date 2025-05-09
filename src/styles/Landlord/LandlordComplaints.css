@@ -1,39 +1,121 @@
 .landlord-complaints-container {
-    padding: 2rem 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .landlord-complaints-title {
-    font-size: 2rem;
-    color: #1e3a8a;
-    margin-bottom: 2rem;
-  }
-  
-  .complaints-list {
-    display: grid;
-    gap: 1.5rem;
-  }
-  
-  .complaint-card {
-    background-color: #fef9c3;
-    border-left: 6px solid #facc15;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(234, 179, 8, 0.1);
-  }
-  
-  .complaint-card h3 {
-    color: #92400e;
-    margin-bottom: 1rem;
-  }
-  
-  .complaint-card p {
-    margin-bottom: 0.8rem;
-    line-height: 1.6;
-    color: #374151;
-  }
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  .landlord-complaints-item{
-    margin-left: 15px;
+.landlord-complaints-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e40af;
+  margin-bottom: 2rem;
+}
+
+.complaints-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.complaint-card {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.3s ease;
+}
+
+.complaint-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.complaint-header h3 {
+  margin: 0;
+  color: #1e40af;
+  font-size: 1.25rem;
+}
+
+.complaint-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.complaint-status.pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.complaint-status.solved {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.complaint-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.complaint-detail {
+  background-color: #f1f5f9;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.complaint-description, 
+.complaint-additional-details {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .complaint-details {
+    grid-template-columns: 1fr;
   }
-  
+}
+
+.landlord-complaints-item {
+  margin-left: 15px;
+}
+
+.solve-complaint-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #059669;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.solve-complaint-btn:hover {
+  background-color: #047857;
+}
+
+.solve-complaint-btn:disabled {
+  background-color: #6ee7b7;
+  cursor: not-allowed;
+}
