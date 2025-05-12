@@ -1,0 +1,119 @@
+/* ConfirmedBookings.css - Centered Layout */
+.landlord-confirmed-bookings-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto 4rem; /* Center container and add footer space */
+}
+
+.landlord-confirmed-bookings-title {
+  font-size: 2rem;
+  color: #1e40af;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.landlord-confirmed-booking-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.landlord-confirmed-booking-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landlord-confirmed-booking-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.landlord-confirmed-booking-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.landlord-confirmed-booking-card-header h3 {
+  margin: 0;
+  color: #1e40af;
+  font-size: 1.3rem;
+  font-weight: 600;
+  max-width: 70%;
+}
+
+.landlord-payment-status {
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.landlord-payment-status.landlord-payment-completed {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.landlord-confirmed-booking-card-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.landlord-confirmed-booking-card-body p {
+  margin: 0.25rem 0;
+  color: #4a5568;
+  display: flex;
+}
+
+.landlord-confirmed-booking-card-body p strong {
+  color: #1e40af;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  min-width: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .landlord-confirmed-booking-list {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .landlord-confirmed-bookings-container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landlord-confirmed-booking-list {
+    grid-template-columns: 1fr;
+  }
+  .landlord-confirmed-booking-card-header h3 {
+    font-size: 1.2rem;
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .landlord-confirmed-booking-card-body {
+    grid-template-columns: 1fr;
+  }
+  .landlord-confirmed-booking-card {
+    padding: 1.25rem;
+  }
+  .landlord-confirmed-bookings-title {
+    font-size: 1.75rem;
+  }
+}

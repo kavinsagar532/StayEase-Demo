@@ -21,6 +21,9 @@ export default function LandlordHeader() {
             <Link to="/landlord/bookings" className="landlord-nav-link"><b>Bookings</b></Link>
           </li>
           <li className="landlord-nav-item">
+            <Link to="/landlord/confirmed-bookings" className="landlord-nav-link"><b>Confirmed Bookings</b></Link>
+          </li>
+          <li className="landlord-nav-item">
             <Link to="/landlord/complaints" className="landlord-nav-link"><b>Complaints</b></Link>
           </li>
           <li className="landlord-nav-item">

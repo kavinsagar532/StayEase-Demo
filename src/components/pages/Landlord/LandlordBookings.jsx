@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
 import "../../../styles/Landlord/LandlordBookings.css";
 
 const initialBookingRequests = [
@@ -24,8 +24,8 @@ export default function LandlordBookings() {
   const [bookingRequests, setBookingRequests] = useState(initialBookingRequests);
 
   const handleBookingAction = (id, action) => {
-    setBookingRequests(prevRequests => 
-      prevRequests.map(request => 
+    setBookingRequests(prevRequests =>
+      prevRequests.map(request =>
         request.id === id ? { ...request, status: action } : request
       )
     );
@@ -33,40 +33,42 @@ export default function LandlordBookings() {
 
   return (
     <div className="landlord-bookings-container">
-      <h2 className="landlord-bookings-title">Booking Requests</h2>
-      <div className="booking-list">
-        {bookingRequests.map((booking) => (
-          <div key={booking.id} className="booking-card">
-            <div className="booking-card-header">
-              <h3>{booking.propertyTitle}</h3>
-              <span className={`booking-status ${booking.status.toLowerCase()}`}>
-                {booking.status}
-              </span>
-            </div>
-            <div className="booking-card-body">
-              <p><strong>Tenant:</strong> {booking.tenantName}</p>
-              <p><strong>From:</strong> {booking.startDate}</p>
-              <p><strong>To:</strong> {booking.endDate}</p>
-            </div>
-            {booking.status === 'Pending' && (
-              <div className="booking-actions">
-                <button 
-                  className="approve-btn"
-                  onClick={() => handleBookingAction(booking.id, 'Approved')}
-                >
-                  Approve
-                </button>
-                <button 
-                  className="reject-btn"
-                  onClick={() => handleBookingAction(booking.id, 'Rejected')}
-                >
-                  Reject
-                </button>
+      <section className="booking-requests-section">
+        <h2 className="landlord-bookings-title">Booking Requests</h2>
+        <div className="booking-list">
+          {bookingRequests.map((booking) => (
+            <div key={booking.id} className="booking-card">
+              <div className="booking-card-header">
+                <h3>{booking.propertyTitle}</h3>
+                <span className={`booking-status ${booking.status.toLowerCase()}`}>
+                  {booking.status}
+                </span>
               </div>
-            )}
-          </div>
-        ))}
-      </div>
+              <div className="booking-card-body">
+                <p><strong>Tenant:</strong> {booking.tenantName}</p>
+                <p><strong>From:</strong> {booking.startDate}</p>
+                <p><strong>To:</strong> {booking.endDate}</p>
+              </div>
+              {booking.status === 'Pending' && (
+                <div className="booking-actions">
+                  <button
+                    className="approve-btn"
+                    onClick={() => handleBookingAction(booking.id, 'Approved')}
+                  >
+                    Approve
+                  </button>
+                  <button
+                    className="reject-btn"
+                    onClick={() => handleBookingAction(booking.id, 'Rejected')}
+                  >
+                    Reject
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

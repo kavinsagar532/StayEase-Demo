@@ -7,6 +7,9 @@ const initialProperties = [
     title: "2 BHK Apartment",
     owner: "John Doe",
     location: "Bangalore",
+    price: "₹35,000",
+    area: "1200 sqft",
+    description: "Spacious 2 BHK apartment with modern amenities.",
     status: "Pending",
     image: "https://via.placeholder.com/150",
   },
@@ -15,6 +18,9 @@ const initialProperties = [
     title: "1 RK Studio",
     owner: "Jane Smith",
     location: "Hyderabad",
+    price: "₹18,000",
+    area: "600 sqft",
+    description: "Cozy 1 RK studio, ideal for a single person.",
     status: "Approved",
     image: "https://via.placeholder.com/150",
   },
@@ -23,6 +29,9 @@ const initialProperties = [
     title: "3 BHK Villa",
     owner: "Alice",
     location: "Delhi",
+    price: "₹60,000",
+    area: "2000 sqft",
+    description: "Luxurious villa with a private garden and pool.",
     status: "Rejected",
     image: "https://via.placeholder.com/150",
   },
@@ -32,16 +41,14 @@ export default function ManageProperties() {
   const [propertyList, setPropertyList] = useState(initialProperties);
 
   const updateStatus = (id, newStatus) => {
-    setPropertyList(prev =>
-      prev.map(prop =>
-        prop.id === id ? { ...prop, status: newStatus } : prop
-      )
+    setPropertyList((prev) =>
+      prev.map((prop) => (prop.id === id ? { ...prop, status: newStatus } : prop))
     );
   };
 
   const handleDelete = (id) => {
     // Instead of removing it permanently here, you'd move it to the archive section
-    setPropertyList(prev => prev.filter(prop => prop.id !== id));
+    setPropertyList((prev) => prev.filter((prop) => prop.id !== id));
   };
 
   return (
@@ -51,7 +58,11 @@ export default function ManageProperties() {
         {propertyList.map((property) => (
           <div className="property-card" key={property.id}>
             <div className="property-card-left">
-              <img src={property.image} alt="Property" className="property-image" />
+              <img
+                src={property.image}
+                alt="Property"
+                className="property-image"
+              />
             </div>
             <div className="property-card-right">
               <div className="property-card-header">
@@ -63,6 +74,9 @@ export default function ManageProperties() {
               <div className="property-card-body">
                 <p><strong>Owner:</strong> {property.owner}</p>
                 <p><strong>Location:</strong> {property.location}</p>
+                <p><strong>Price:</strong> {property.price}</p>
+                <p><strong>Area:</strong> {property.area}</p>
+                <p><strong>Description:</strong> {property.description}</p>
               </div>
               <div className="property-card-actions">
                 {property.status === "Pending" && (

@@ -1,51 +1,89 @@
 .add-property-container {
-    padding: 2rem 30rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-property-title {
+  font-size: 2.2rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.add-property-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.add-property-form input,
+.add-property-form select,
+.add-property-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  transition: border 0.3s ease;
+}
+
+.add-property-form input:focus,
+.add-property-form textarea:focus,
+.add-property-form select:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.add-property-form input[type="file"] {
+  padding: 0.6rem;
+  border: none;
+  background-color: transparent;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.checkbox-group label {
+  font-size: 0.95rem;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.submit-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1e40af;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .add-property-container {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
   }
-  
+
   .add-property-title {
-    font-size: 2rem;
-    color: #1e3a8a;
-    margin-bottom: 2rem;
+    font-size: 1.7rem;
   }
-  
-  .add-property-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    max-width: 600px;
-  }
-  
-  .add-property-form input,
-  .add-property-form textarea {
-    padding: 0.75rem 1rem;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
-  
-  .add-property-form input:focus,
-  .add-property-form textarea:focus {
-    border-color: #2563eb;
-    outline: none;
-  }
-  
-  .add-property-form input[type="file"] {
-    padding: 0.4rem;
-  }
-  
-  .submit-btn {
-    background-color: #2563eb;
-    color: white;
-    padding: 0.9rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #1e40af;
-  }
-  
+}

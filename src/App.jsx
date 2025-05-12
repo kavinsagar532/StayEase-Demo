@@ -35,6 +35,7 @@ import ManageBookings from "./components/pages/Admin/ManageBookings";
 import AddProperty from "./components/pages/Landlord/AddProperty";
 import MyProperties from "./components/pages/Landlord/MyProperties";
 import LandlordBookings from "./components/pages/Landlord/LandlordBookings";
+import ConfirmedBookings from "./components/pages/Landlord/ConfirmedBookings";
 import LandlordComplaints from "./components/pages/Landlord/LandlordComplaints";
 import ViewProperties from "./components/pages/Tenant/ViewProperties";
 import MyBookings from "./components/pages/Tenant/MyBookings";
@@ -187,6 +188,13 @@ function App() {
           <>
             <LandlordHeader />
             <LandlordBookings />
+            <Footer />
+          </>
+        } />
+        <Route path="/landlord/confirmed-bookings" element={
+          <>
+            <LandlordHeader />
+            <ConfirmedBookings />
             <Footer />
           </>
         } />

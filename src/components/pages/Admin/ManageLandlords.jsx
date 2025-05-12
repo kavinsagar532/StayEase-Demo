@@ -8,6 +8,11 @@ const landlords = [
     email: "john@example.com",
     phone: "+1234567890",
     status: "Active",
+    registrationDate: "2023-01-15",
+    gender: "Male",
+    totalProperties: 3,
+    completedBookings: 5,
+    activeComplaints: 1,
   },
   {
     id: 2,
@@ -15,8 +20,24 @@ const landlords = [
     email: "jane@example.com",
     phone: "+0987654321",
     status: "Blocked",
+    registrationDate: "2023-03-22",
+    gender: "Female",
+    totalProperties: 1,
+    completedBookings: 2,
+    activeComplaints: 0,
   },
-  // Add more landlords as needed
+  {
+    id: 3,
+    name: "Michael Johnson",
+    email: "michael@example.com",
+    phone: "+1122334455",
+    status: "Active",
+    registrationDate: "2022-11-10",
+    gender: "Male",
+    totalProperties: 5,
+    completedBookings: 12,
+    activeComplaints: 2,
+  }
 ];
 
 export default function ManageLandlords() {
@@ -51,6 +72,19 @@ export default function ManageLandlords() {
             <div className="landlord-card-body">
               <p><strong>Email:</strong> {landlord.email}</p>
               <p><strong>Phone:</strong> {landlord.phone}</p>
+              <div className="landlord-card-details">
+                <div className="landlord-detail-section">
+                  <h4>Profile Overview</h4>
+                  <p><strong>Registration Date:</strong> {landlord.registrationDate}</p>
+                  <p><strong>Gender:</strong> {landlord.gender}</p>
+                </div>
+                <div className="landlord-detail-section">
+                  <h4>Property Insights</h4>
+                  <p><strong>Total Properties:</strong> {landlord.totalProperties}</p>
+                  <p><strong>Completed Bookings:</strong> {landlord.completedBookings}</p>
+                  <p><strong>Active Complaints:</strong> {landlord.activeComplaints}</p>
+                </div>
+              </div>
             </div>
             <div className="landlord-card-actions">
               <button
