@@ -5,7 +5,9 @@ import "../styles/CommonHeader.css";
 export default function CommonHeader() {
   return (
     <header className="common-header">
-      <h1 className="brand-name">StayEase</h1>
+      <Link to="/" className="brand-link">
+        <h1 className="brand-name">StayEase</h1>
+      </Link>
       <nav className="nav-links">
         <ul>
           <li>

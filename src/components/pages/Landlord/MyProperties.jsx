@@ -6,6 +6,7 @@ const sampleProperties = [
     id: 1,
     title: "Spacious 2BHK in HSR Layout",
     location: "Bangalore",
+    pincode: "560102",
     price: 18000,
     type: "Apartment",
     rooms: 2,
@@ -22,6 +23,7 @@ const sampleProperties = [
     id: 2,
     title: "Modern Studio Apartment",
     location: "Pune",
+    pincode: "411001",
     price: 12000,
     type: "Studio",
     rooms: 1,
@@ -35,7 +37,6 @@ const sampleProperties = [
     status: "Approved"
   }
 ];
-
 
 export default function MyProperties() {
   return (
@@ -59,6 +60,7 @@ export default function MyProperties() {
               <div className="property-details">
                 <p><strong>Property Type:</strong> {property.type}</p>
                 <p><strong>Location:</strong> {property.location}</p>
+                <p><strong>Pincode:</strong> {property.pincode}</p>
                 <p><strong>Number of Rooms:</strong> {property.rooms}</p>
                 <p><strong>Available From:</strong> {property.availableFrom}</p>
                 <p><strong>Furnishing Status:</strong> {property.furnishing}</p>

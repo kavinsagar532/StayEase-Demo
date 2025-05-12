@@ -1,58 +1,229 @@
-.my-bookings-container {
-    padding: 2rem 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.tenant-mybookings-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.tenant-mybookings-title {
+  font-size: 2.5rem;
+  color: #1e40af;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tenant-mybookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.tenant-mybookings-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 500px;
+}
+
+.tenant-mybookings-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.tenant-mybookings-image-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.tenant-mybookings-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tenant-mybookings-image-container:hover .tenant-mybookings-image {
+  opacity: 0.85;
+}
+
+.tenant-mybookings-status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.tenant-mybookings-status.confirmed {
+  background-color: #059669;
+}
+
+.tenant-mybookings-status.pending {
+  background-color: #d97706;
+}
+
+.tenant-mybookings-status.cancelled {
+  background-color: #dc2626;
+}
+
+.tenant-mybookings-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tenant-mybookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1.5rem;
+}
+
+.tenant-mybookings-header h3 {
+  margin: 0;
+  color: #1e40af;
+  font-size: 1.6rem;
+  font-weight: 600;
+  max-width: 70%;
+}
+
+.tenant-mybookings-pricing {
+  text-align: right;
+}
+
+.tenant-mybookings-rent {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0;
+}
+
+.tenant-mybookings-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.tenant-mybookings-details p {
+  margin: 0;
+  color: #4a5568;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tenant-mybookings-details p strong {
+  color: #1e40af;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.tenant-mybookings-amenities {
+  border-top: 2px solid #e2e8f0;
+  padding-top: 1.5rem;
+}
+
+.tenant-mybookings-amenities strong {
+  color: #1e40af;
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.tenant-mybookings-amenities ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.tenant-mybookings-amenities ul li {
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.tenant-mybookings-amenities ul li:hover {
+  background-color: #e2e8f0;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tenant-mybookings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   }
-  
-  .my-bookings-title {
-    font-size: 2rem;
-    color: #1e3a8a;
-    margin-bottom: 2rem;
+  .tenant-mybookings-card {
+    min-width: 450px;
   }
-  
-  .booking-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .tenant-mybookings-grid {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
   }
-  
-  .booking-card {
-    background-color: #f1f5f9;
-    border-left: 6px solid #2563eb;
-    border-radius: 12px;
+  .tenant-mybookings-card {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tenant-mybookings-container {
+    margin-bottom: 3rem;
+  }
+  .tenant-mybookings-details {
+    grid-template-columns: 1fr;
+  }
+  .tenant-mybookings-header h3 {
+    font-size: 1.4rem;
+  }
+  .tenant-mybookings-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tenant-mybookings-container {
+    margin-bottom: 2.5rem;
     padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
   }
-  
-  .booking-card:hover {
-    transform: translateY(-5px);
+  .tenant-mybookings-info {
+    padding: 1.5rem;
   }
-  
-  .booking-card h3 {
-    font-size: 1.3rem;
-    color: #1e40af;
-    margin-bottom: 1rem;
+  .tenant-mybookings-image {
+    height: 200px;
   }
-  
-  .booking-card p {
-    font-size: 1rem;
-    margin: 0.4rem 0;
+  .tenant-mybookings-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
-  
-  .booking-status {
-    font-weight: bold;
-    margin-top: 1rem;
+  .tenant-mybookings-pricing {
+    text-align: left;
+    width: 100%;
   }
-  
-  .booking-status.confirmed {
-    color: #10b981;
+  .tenant-mybookings-header h3 {
+    max-width: 100%;
   }
-  
-  .booking-status.pending {
-    color: #f59e0b;
-  }
-  
-  .booking-status.rejected {
-    color: #ef4444;
-  }
-  
+}

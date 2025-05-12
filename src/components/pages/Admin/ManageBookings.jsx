@@ -51,7 +51,7 @@ export default function ManageBookings() {
 
   return (
     <div className="admin-manage-bookings-container">
-      <h2 className="admin-manage-bookings-title">Manage Bookings</h2>
+      <h2 className="admin-manage-bookings-title">Bookings</h2>
       <div className="admin-booking-cards-container">
         {bookings.map((booking) => (
           <div className="admin-booking-card" key={booking.id}>

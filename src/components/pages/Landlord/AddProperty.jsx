@@ -5,6 +5,7 @@ export default function AddProperty() {
   const [formData, setFormData] = useState({
     title: "",
     location: "",
+    pincode: "", // Added pincode field
     price: "",
     type: "",
     rooms: "",
@@ -35,7 +36,7 @@ export default function AddProperty() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Property Submitted:", formData);
-    // Here you would typically send `formData` to your backend API
+    // Typically send `formData` to backend API here
   };
 
   return (
@@ -55,6 +56,14 @@ export default function AddProperty() {
           name="location"
           placeholder="Location"
           value={formData.location}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="pincode"
+          placeholder="Pincode"
+          value={formData.pincode}
           onChange={handleChange}
           required
         />
@@ -125,10 +134,51 @@ export default function AddProperty() {
           required
         />
         <div className="checkbox-group">
-          <label><input type="checkbox" name="amenities" value="WiFi" onChange={handleChange} /> WiFi</label>
-          <label><input type="checkbox" name="amenities" value="AC" onChange={handleChange} /> AC</label>
-          <label><input type="checkbox" name="amenities" value="Parking" onChange={handleChange} /> Parking</label>
-          <label><input type="checkbox" name="amenities" value="Laundry" onChange={handleChange} /> Laundry</label>
+          <label>
+            <input
+              type="checkbox"
+              name="amenities"
+              value="WiFi"
+              onChange={handleChange}
+            />{" "}
+            WiFi
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="amenities"
+              value="AC"
+              onChange={handleChange}
+            />{" "}
+            AC
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="amenities"
+              value="Parking"
+              onChange={handleChange}
+            />{" "}
+            Parking
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="amenities"
+              value="Laundry"
+              onChange={handleChange}
+            />{" "}
+            Laundry
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="amenities"
+              value="Swimming Pool"
+              onChange={handleChange}
+            />{" "}
+            Swimming Pool
+          </label>
         </div>
         <input
           type="file"
@@ -137,7 +187,9 @@ export default function AddProperty() {
           onChange={handleChange}
           required
         />
-        <button type="submit" className="submit-btn">Add Property</button>
+        <button type="submit" className="submit-btn">
+          Add Property
+        </button>
       </form>
     </div>
   );

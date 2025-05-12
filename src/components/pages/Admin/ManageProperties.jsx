@@ -7,34 +7,55 @@ const initialProperties = [
     title: "2 BHK Apartment",
     owner: "John Doe",
     location: "Bangalore",
-    price: "₹35,000",
-    area: "1200 sqft",
+    pincode: "560001",
+    price: 35000,
+    type: "Apartment",
+    rooms: 2,
+    availableFrom: "2025-06-15",
+    furnishing: "Fully Furnished",
     description: "Spacious 2 BHK apartment with modern amenities.",
-    status: "Pending",
-    image: "https://via.placeholder.com/150",
+    size: 1200,
+    contact: "9876543210",
+    amenities: ["WiFi", "AC", "Parking", "Swimming Pool"],
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=60",
+    status: "Pending"
   },
   {
     id: 2,
     title: "1 RK Studio",
     owner: "Jane Smith",
     location: "Hyderabad",
-    price: "₹18,000",
-    area: "600 sqft",
+    pincode: "500001",
+    price: 18000,
+    type: "Studio",
+    rooms: 1,
+    availableFrom: "2025-07-01",
+    furnishing: "Semi-furnished",
     description: "Cozy 1 RK studio, ideal for a single person.",
-    status: "Approved",
-    image: "https://via.placeholder.com/150",
+    size: 600,
+    contact: "8765432109",
+    amenities: ["WiFi", "Parking"],
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=60",
+    status: "Approved"
   },
   {
     id: 3,
     title: "3 BHK Villa",
-    owner: "Alice",
+    owner: "Alice Johnson",
     location: "Delhi",
-    price: "₹60,000",
-    area: "2000 sqft",
+    pincode: "110001",
+    price: 60000,
+    type: "Villa",
+    rooms: 3,
+    availableFrom: "2025-08-01",
+    furnishing: "Fully Furnished",
     description: "Luxurious villa with a private garden and pool.",
-    status: "Rejected",
-    image: "https://via.placeholder.com/150",
-  },
+    size: 2000,
+    contact: "7654321098",
+    amenities: ["WiFi", "AC", "Parking", "Swimming Pool"],
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60",
+    status: "Rejected"
+  }
 ];
 
 export default function ManageProperties() {
@@ -47,73 +68,91 @@ export default function ManageProperties() {
   };
 
   const handleDelete = (id) => {
-    // Instead of removing it permanently here, you'd move it to the archive section
     setPropertyList((prev) => prev.filter((prop) => prop.id !== id));
   };
 
   return (
     <div className="manage-properties-container">
       <h2 className="manage-properties-title">Manage Properties</h2>
-      <div className="property-cards-container">
+      <div className="property-grid">
         {propertyList.map((property) => (
-          <div className="property-card" key={property.id}>
-            <div className="property-card-left">
-              <img
-                src={property.image}
-                alt="Property"
-                className="property-image"
-              />
+          <div key={property.id} className="property-card">
+            <div className="property-image-container">
+              <img src={property.image} alt={property.title} className="property-image" />
+              <span className={`property-status ${property.status.toLowerCase()}`}>
+                {property.status}
+              </span>
             </div>
-            <div className="property-card-right">
-              <div className="property-card-header">
-                <h3 className="property-card-title">{property.title}</h3>
-                <span className={`property-status ${property.status.toLowerCase()}`}>
-                  {property.status}
-                </span>
+            <div className="property-info">
+              <div className="property-header">
+                <h3>{property.title}</h3>
+                <div className="property-pricing">
+                  <p className="property-rent">₹{property.price}/month</p>
+                </div>
               </div>
-              <div className="property-card-body">
+              
+              <div className="property-details">
                 <p><strong>Owner:</strong> {property.owner}</p>
+                <p><strong>Property Type:</strong> {property.type}</p>
                 <p><strong>Location:</strong> {property.location}</p>
-                <p><strong>Price:</strong> {property.price}</p>
-                <p><strong>Area:</strong> {property.area}</p>
-                <p><strong>Description:</strong> {property.description}</p>
+                <p><strong>Pincode:</strong> {property.pincode}</p>
+                <p><strong>Number of Rooms:</strong> {property.rooms}</p>
+                <p><strong>Available From:</strong> {property.availableFrom}</p>
+                <p><strong>Furnishing Status:</strong> {property.furnishing}</p>
+                <p><strong>Property Size:</strong> {property.size} sq.ft</p>
+                <p><strong>Contact Number:</strong> {property.contact}</p>
               </div>
-              <div className="property-card-actions">
+              
+              <div className="property-description">
+                <strong>Description:</strong>
+                <p>{property.description}</p>
+              </div>
+              
+              <div className="property-amenities">
+                <strong>Amenities:</strong>
+                <ul>
+                  {property.amenities.map((amenity, index) => (
+                    <li key={index}>{amenity}</li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="property-actions">
                 {property.status === "Pending" && (
                   <>
-                    <button
+                    <button 
                       onClick={() => updateStatus(property.id, "Approved")}
-                      className="property-action-btn"
+                      className="approve-btn"
                     >
                       Approve
                     </button>
-                    <button
+                    <button 
                       onClick={() => updateStatus(property.id, "Rejected")}
-                      className="property-delete-btn"
+                      className="reject-btn"
                     >
                       Reject
                     </button>
                   </>
                 )}
                 {property.status === "Approved" && (
-                  <button
+                  <button 
                     onClick={() => updateStatus(property.id, "Rejected")}
-                    className="property-delete-btn"
+                    className="reject-btn"
                   >
                     Reject
                   </button>
                 )}
                 {property.status === "Rejected" && (
-                  <button
+                  <button 
                     onClick={() => updateStatus(property.id, "Approved")}
-                    className="property-action-btn"
+                    className="approve-btn"
                   >
                     Approve
                   </button>
                 )}
-                <button
+                <button 
                   onClick={() => handleDelete(property.id)}
-                  className="property-delete-btn"
+                  className="delete-btn"
                 >
                   Delete
                 </button>

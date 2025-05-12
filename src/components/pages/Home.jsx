@@ -21,10 +21,10 @@ export default function Home() {
       <section className="home-features">
         <h2>Why Choose StayEase?</h2>
         <ul>
-          <li>Smart Search & Filters</li>
+          <li>Book Your Accomodation</li>
           <li>Verified Listings with Photos</li>
-          <li>Secure Booking Process</li>
-          <li>Direct Communication with Landlords</li>
+          <li>Complaints Easily</li>
+          <li>Make a Happy Stay</li>
         </ul>
       </section>
     </div>

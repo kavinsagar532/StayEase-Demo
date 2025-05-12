@@ -8,6 +8,7 @@ const initialComplaints = [
     tenantContact: "9876543210",
     property: "Apartment 101, Green Towers",
     propertyLandlord: "Michael Thompson",
+    landlordContact: "9123456789", // Added landlord contact
     complaint: "There is a water leakage in the bathroom.",
     issueType: "Plumbing",
     urgency: "High",
@@ -21,6 +22,7 @@ const initialComplaints = [
     tenantContact: "8765432109",
     property: "Villa 5, Sunset Residency",
     propertyLandlord: "Emily Rodriguez",
+    landlordContact: "9234567890", // Added landlord contact
     complaint: "The AC is not working properly.",
     issueType: "Maintenance",
     urgency: "Medium",
@@ -34,6 +36,7 @@ const initialComplaints = [
     tenantContact: "7654321098",
     property: "Studio 302, Tech Park Apartments",
     propertyLandlord: "David Kim",
+    landlordContact: "9345678901", // Added landlord contact
     complaint: "The Wi-Fi is down.",
     issueType: "Utilities",
     urgency: "Low",
@@ -74,6 +77,9 @@ export default function ManageComplaints() {
               </div>
               <div className="complaint-detail">
                 <strong>Property Landlord:</strong> {complaint.propertyLandlord}
+              </div>
+              <div className="complaint-detail">
+                <strong>Landlord Contact:</strong> {complaint.landlordContact}
               </div>
               <div className="complaint-detail">
                 <strong>Tenant Contact:</strong> {complaint.tenantContact}

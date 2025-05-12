@@ -5,12 +5,12 @@ export default function SubmitComplaint() {
   const [complaintDetails, setComplaintDetails] = useState({
     subject: "",
     description: "",
+    additionalDetails: "",
     propertyAddress: "",
     issueType: "",
     urgency: "low",
     contactNumber: "",
-    email: "",
-    additionalDetails: ""
+    email: ""
   });
 
   const handleInputChange = (e) => {
@@ -23,27 +23,25 @@ export default function SubmitComplaint() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the data to the backend
     console.log("Complaint Details:", complaintDetails);
     alert("Complaint submitted successfully!");
-    // Reset form
     setComplaintDetails({
       subject: "",
       description: "",
+      additionalDetails: "",
       propertyAddress: "",
       issueType: "",
       urgency: "low",
       contactNumber: "",
-      email: "",
-      additionalDetails: ""
+      email: ""
     });
   };
 
   return (
-    <div className="submit-complaint-container">
-      <h2 className="submit-complaint-title">Submit a Detailed Complaint</h2>
-      <form onSubmit={handleSubmit} className="submit-complaint-form">
-        <div className="form-group">
+    <div className="tenant-mycomplaintsubmission-container">
+      <h2 className="tenant-mycomplaintsubmission-title">Submit a Detailed Complaint</h2>
+      <form onSubmit={handleSubmit} className="tenant-mycomplaintsubmission-form">
+        <div className="tenant-mycomplaintsubmission-form-group">
           <label>Subject:</label>
           <input
             type="text"
@@ -55,7 +53,7 @@ export default function SubmitComplaint() {
           />
         </div>
 
-        <div className="form-group">
+        <div className="tenant-mycomplaintsubmission-form-group">
           <label>Property Address:</label>
           <input
             type="text"
@@ -67,7 +65,7 @@ export default function SubmitComplaint() {
           />
         </div>
 
-        <div className="form-group">
+        <div className="tenant-mycomplaintsubmission-form-group">
           <label>Issue Type:</label>
           <select
             name="issueType"
@@ -84,7 +82,7 @@ export default function SubmitComplaint() {
           </select>
         </div>
 
-        <div className="form-group">
+        <div className="tenant-mycomplaintsubmission-form-group">
           <label>Urgency Level:</label>
           <select
             name="urgency"
@@ -98,7 +96,7 @@ export default function SubmitComplaint() {
           </select>
         </div>
 
-        <div className="form-group">
+        <div className="tenant-mycomplaintsubmission-form-group">
           <label>Contact Number:</label>
           <input
             type="tel"
@@ -110,7 +108,7 @@ export default function SubmitComplaint() {
           />
         </div>
 
-        <div className="form-group">
+        <div className="tenant-mycomplaintsubmission-form-group">
           <label>Email:</label>
           <input
             type="email"
@@ -121,30 +119,32 @@ export default function SubmitComplaint() {
           />
         </div>
 
-        <div className="form-group">
+        <div className="tenant-mycomplaintsubmission-form-group tenant-mycomplaintsubmission-full-width">
           <label>Description:</label>
           <textarea
             name="description"
             value={complaintDetails.description}
             onChange={handleInputChange}
-            rows="5"
+            rows="6"
             placeholder="Provide a detailed description of the issue"
             required
           ></textarea>
         </div>
 
-        <div className="form-group">
+        <div className="tenant-mycomplaintsubmission-form-group tenant-mycomplaintsubmission-full-width">
           <label>Additional Details:</label>
           <textarea
             name="additionalDetails"
             value={complaintDetails.additionalDetails}
             onChange={handleInputChange}
-            rows="3"
-            placeholder="Any additional information that might help resolve the issue"
+            rows="6"
+            placeholder="Provide any other relevant information"
           ></textarea>
         </div>
 
-        <button type="submit" className="submit-complaint-btn">Submit Complaint</button>
+        <button type="submit" className="tenant-mycomplaintsubmission-submit-btn">
+          Submit Complaint
+        </button>
       </form>
     </div>
   );
